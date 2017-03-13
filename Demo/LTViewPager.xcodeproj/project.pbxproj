@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C008D91D1DA8CF7A002D1BE4 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C008D91C1DA8CF7A002D1BE4 /* UIView+JKFrame.m */; };
+		C0095E701DAB5C0900E54701 /* LTUnderLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0095E6F1DAB5C0900E54701 /* LTUnderLineController.m */; };
+		C0095E731DAB5FC000E54701 /* LTEnlargeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0095E721DAB5FC000E54701 /* LTEnlargeController.m */; };
+		C0095E761DAB625700E54701 /* ViewControllerEnlarge.m in Sources */ = {isa = PBXBuildFile; fileRef = C0095E751DAB625700E54701 /* ViewControllerEnlarge.m */; };
+		C0095E791DAB64A400E54701 /* ViewControllerViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0095E781DAB64A400E54701 /* ViewControllerViewPager.m */; };
+		C058A6D91D94EF0C00278E8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C058A6D21D94EF0C00278E8A /* AppDelegate.m */; };
+		C058A6DA1D94EF0C00278E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C058A6D31D94EF0C00278E8A /* Assets.xcassets */; };
+		C058A6DB1D94EF0C00278E8A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C058A6D41D94EF0C00278E8A /* Base.lproj */; };
+		C058A6DC1D94EF0C00278E8A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C058A6D51D94EF0C00278E8A /* Info.plist */; };
+		C058A6DD1D94EF0C00278E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C058A6D61D94EF0C00278E8A /* main.m */; };
+		C058A6DE1D94EF0C00278E8A /* ViewControllerUnderLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C058A6D81D94EF0C00278E8A /* ViewControllerUnderLine.m */; };
+		C0DB863A1DA9DF2B0069266E /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DB86391DA9DF2B0069266E /* DemoTableViewController.m */; };
+		C0DB86441DAA407A0069266E /* ChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DB86431DAA407A0069266E /* ChildTableViewController.m */; };
+		C0DFB4481D9E1C59009A6CD5 /* LTViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DFB4471D9E1C59009A6CD5 /* LTViewPagerController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C008D91A1DA8A0BF002D1BE4 /* LTViewPagerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LTViewPagerHeader.h; path = ../LTViewPager/LTViewPagerHeader.h; sourceTree = "<group>"; };
+		C008D91B1DA8CF7A002D1BE4 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFrame.h"; path = "../LTViewPager/UIView+JKFrame.h"; sourceTree = "<group>"; };
+		C008D91C1DA8CF7A002D1BE4 /* UIView+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+JKFrame.m"; path = "../LTViewPager/UIView+JKFrame.m"; sourceTree = "<group>"; };
+		C0095E6E1DAB5C0900E54701 /* LTUnderLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTUnderLineController.h; path = ../LTViewPager/LTUnderLineController.h; sourceTree = "<group>"; };
+		C0095E6F1DAB5C0900E54701 /* LTUnderLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTUnderLineController.m; path = ../LTViewPager/LTUnderLineController.m; sourceTree = "<group>"; };
+		C0095E711DAB5FC000E54701 /* LTEnlargeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTEnlargeController.h; path = ../LTViewPager/LTEnlargeController.h; sourceTree = "<group>"; };
+		C0095E721DAB5FC000E54701 /* LTEnlargeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTEnlargeController.m; path = ../LTViewPager/LTEnlargeController.m; sourceTree = "<group>"; };
+		C0095E741DAB625700E54701 /* ViewControllerEnlarge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerEnlarge.h; sourceTree = "<group>"; };
+		C0095E751DAB625700E54701 /* ViewControllerEnlarge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerEnlarge.m; sourceTree = "<group>"; };
+		C0095E771DAB64A400E54701 /* ViewControllerViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerViewPager.h; sourceTree = "<group>"; };
+		C0095E781DAB64A400E54701 /* ViewControllerViewPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerViewPager.m; sourceTree = "<group>"; };
+		C058A6B41D94EE6400278E8A /* LTViewPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTViewPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C058A6D11D94EF0C00278E8A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C058A6D21D94EF0C00278E8A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C058A6D31D94EF0C00278E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C058A6D41D94EF0C00278E8A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		C058A6D51D94EF0C00278E8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C058A6D61D94EF0C00278E8A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C058A6D71D94EF0C00278E8A /* ViewControllerUnderLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerUnderLine.h; sourceTree = "<group>"; };
+		C058A6D81D94EF0C00278E8A /* ViewControllerUnderLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerUnderLine.m; sourceTree = "<group>"; };
+		C0DB86381DA9DF2B0069266E /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		C0DB86391DA9DF2B0069266E /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
+		C0DB86421DAA407A0069266E /* ChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildTableViewController.h; sourceTree = "<group>"; };
+		C0DB86431DAA407A0069266E /* ChildTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildTableViewController.m; sourceTree = "<group>"; };
+		C0DFB4461D9E1C59009A6CD5 /* LTViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTViewPagerController.h; path = ../LTViewPager/LTViewPagerController.h; sourceTree = "<group>"; };
+		C0DFB4471D9E1C59009A6CD5 /* LTViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTViewPagerController.m; path = ../LTViewPager/LTViewPagerController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C058A6B11D94EE6400278E8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C058A6AB1D94EE6400278E8A = {
+			isa = PBXGroup;
+			children = (
+				C058A6DF1D94EF1A00278E8A /* LTViewPager */,
+				C058A6D01D94EEFC00278E8A /* Demo */,
+				C058A6B51D94EE6400278E8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C058A6B51D94EE6400278E8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C058A6B41D94EE6400278E8A /* LTViewPager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C058A6D01D94EEFC00278E8A /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C0095E771DAB64A400E54701 /* ViewControllerViewPager.h */,
+				C0095E781DAB64A400E54701 /* ViewControllerViewPager.m */,
+				C058A6D71D94EF0C00278E8A /* ViewControllerUnderLine.h */,
+				C058A6D81D94EF0C00278E8A /* ViewControllerUnderLine.m */,
+				C0095E741DAB625700E54701 /* ViewControllerEnlarge.h */,
+				C0095E751DAB625700E54701 /* ViewControllerEnlarge.m */,
+				C0DB86421DAA407A0069266E /* ChildTableViewController.h */,
+				C0DB86431DAA407A0069266E /* ChildTableViewController.m */,
+				C0DB86381DA9DF2B0069266E /* DemoTableViewController.h */,
+				C0DB86391DA9DF2B0069266E /* DemoTableViewController.m */,
+				C058A6D11D94EF0C00278E8A /* AppDelegate.h */,
+				C058A6D21D94EF0C00278E8A /* AppDelegate.m */,
+				C058A6D31D94EF0C00278E8A /* Assets.xcassets */,
+				C058A6D41D94EF0C00278E8A /* Base.lproj */,
+				C058A6D51D94EF0C00278E8A /* Info.plist */,
+				C058A6D61D94EF0C00278E8A /* main.m */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		C058A6DF1D94EF1A00278E8A /* LTViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				C0095E6E1DAB5C0900E54701 /* LTUnderLineController.h */,
+				C0095E6F1DAB5C0900E54701 /* LTUnderLineController.m */,
+				C0095E711DAB5FC000E54701 /* LTEnlargeController.h */,
+				C0095E721DAB5FC000E54701 /* LTEnlargeController.m */,
+				C0DFB4461D9E1C59009A6CD5 /* LTViewPagerController.h */,
+				C0DFB4471D9E1C59009A6CD5 /* LTViewPagerController.m */,
+				C008D91A1DA8A0BF002D1BE4 /* LTViewPagerHeader.h */,
+				C008D91B1DA8CF7A002D1BE4 /* UIView+JKFrame.h */,
+				C008D91C1DA8CF7A002D1BE4 /* UIView+JKFrame.m */,
+			);
+			name = LTViewPager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C058A6B31D94EE6400278E8A /* LTViewPager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C058A6CB1D94EE6400278E8A /* Build configuration list for PBXNativeTarget "LTViewPager" */;
+			buildPhases = (
+				C058A6B01D94EE6400278E8A /* Sources */,
+				C058A6B11D94EE6400278E8A /* Frameworks */,
+				C058A6B21D94EE6400278E8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTViewPager;
+			productName = LTViewPager;
+			productReference = C058A6B41D94EE6400278E8A /* LTViewPager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C058A6AC1D94EE6400278E8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = leafteam;
+				TargetAttributes = {
+					C058A6B31D94EE6400278E8A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C058A6AF1D94EE6400278E8A /* Build configuration list for PBXProject "LTViewPager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C058A6AB1D94EE6400278E8A;
+			productRefGroup = C058A6B51D94EE6400278E8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C058A6B31D94EE6400278E8A /* LTViewPager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C058A6B21D94EE6400278E8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C058A6DB1D94EF0C00278E8A /* Base.lproj in Resources */,
+				C058A6DA1D94EF0C00278E8A /* Assets.xcassets in Resources */,
+				C058A6DC1D94EF0C00278E8A /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C058A6B01D94EE6400278E8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0DB86441DAA407A0069266E /* ChildTableViewController.m in Sources */,
+				C0095E791DAB64A400E54701 /* ViewControllerViewPager.m in Sources */,
+				C058A6DE1D94EF0C00278E8A /* ViewControllerUnderLine.m in Sources */,
+				C058A6DD1D94EF0C00278E8A /* main.m in Sources */,
+				C0095E761DAB625700E54701 /* ViewControllerEnlarge.m in Sources */,
+				C058A6D91D94EF0C00278E8A /* AppDelegate.m in Sources */,
+				C0095E701DAB5C0900E54701 /* LTUnderLineController.m in Sources */,
+				C0DB863A1DA9DF2B0069266E /* DemoTableViewController.m in Sources */,
+				C0DFB4481D9E1C59009A6CD5 /* LTViewPagerController.m in Sources */,
+				C0095E731DAB5FC000E54701 /* LTEnlargeController.m in Sources */,
+				C008D91D1DA8CF7A002D1BE4 /* UIView+JKFrame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C058A6C91D94EE6400278E8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C058A6CA1D94EE6400278E8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C058A6CC1D94EE6400278E8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leafteam.LTViewPager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C058A6CD1D94EE6400278E8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leafteam.LTViewPager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C058A6AF1D94EE6400278E8A /* Build configuration list for PBXProject "LTViewPager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C058A6C91D94EE6400278E8A /* Debug */,
+				C058A6CA1D94EE6400278E8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C058A6CB1D94EE6400278E8A /* Build configuration list for PBXNativeTarget "LTViewPager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C058A6CC1D94EE6400278E8A /* Debug */,
+				C058A6CD1D94EE6400278E8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C058A6AC1D94EE6400278E8A /* Project object */;
+}
