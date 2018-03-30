@@ -30,11 +30,14 @@
 
 - (void)p_setupSubViews {
     NSInteger count = 8;
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:count];
     for (NSInteger i = 0; i < count; i++) {
         ChildTableViewController *childController  = [[ChildTableViewController alloc] init];
-        childController.title = [NSString stringWithFormat:@"Enlarge%d", i];
-        [self addChildViewController:childController];
+        childController.title = [NSString stringWithFormat:@"Enlarge%ld", i];
+        [tempArray addObject:childController];
     }
+    
+    self.controllerArray = [tempArray copy];
 }
 
 

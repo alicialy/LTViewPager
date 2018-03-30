@@ -82,9 +82,9 @@ static const NSInteger kTagBase = 100;
 
 #pragma mark - Private Method
 - (NSArray *)p_getTitlesWidth {
-    NSMutableArray *titleWidthArray = [NSMutableArray arrayWithCapacity:self.childViewControllers.count];
-    for (int i = 0; i < self.childViewControllers.count; i++) {
-        UIViewController *controller = self.childViewControllers[i];
+    NSMutableArray *titleWidthArray = [NSMutableArray arrayWithCapacity:self.controllerArray.count];
+    for (int i = 0; i < self.controllerArray.count; i++) {
+        UIViewController *controller = self.controllerArray[i];
         
         NSString *title = controller.title;
         
@@ -100,10 +100,10 @@ static const NSInteger kTagBase = 100;
 - (void)p_setupTitles {
     NSArray *titleWidthArray = [self p_getTitlesWidth];
     
-    NSInteger count = self.childViewControllers.count;
+    NSInteger count = self.controllerArray.count;
     CGFloat totalWidth = 0;
     for (int i = 0; i < count; i++) {
-        UIViewController *controller = self.childViewControllers[i];
+        UIViewController *controller = self.controllerArray[i];
         
         NSString *title = controller.title;
         
@@ -175,7 +175,7 @@ static const NSInteger kTagBase = 100;
         selectedIndex--;
     }
     NSInteger index = selectedIndex - kTagBase;
-    if (index >= 0 && index < self.childViewControllers.count) {
+    if (index >= 0 && index < self.controllerArray.count) {
         if (!self.isTapTitle) {
             // Tap Tile has setted selected label
             UILabel *label = [self.titleScrollView viewWithTag:selectedIndex];
@@ -188,7 +188,7 @@ static const NSInteger kTagBase = 100;
 
 #pragma mark - Collection Delegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.childViewControllers.count;
+    return self.controllerArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -196,7 +196,7 @@ static const NSInteger kTagBase = 100;
     
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    UIViewController *controller = self.childViewControllers[indexPath.row];
+    UIViewController *controller = self.controllerArray[indexPath.row];
     UIView *subView = (UIView *)controller.view;
     subView.frame = CGRectMake(0, 0, self.contentView.jk_width, self.contentView.jk_height);
 

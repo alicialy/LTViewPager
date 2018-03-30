@@ -29,6 +29,12 @@ static  NSString * const kChildReuseId = @"ChildCell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kChildReuseId];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSLog(@"in View Will Apperear");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -47,7 +53,7 @@ static  NSString * const kChildReuseId = @"ChildCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kChildReuseId forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %d", self.title, indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %ld", self.title, indexPath.row];
     return cell;
 }
 

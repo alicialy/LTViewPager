@@ -17,11 +17,11 @@
 	
 	ViewController *vc1 = [[ViewController alloc] init];
 	vc1.title = @"vc1";
-	[underLineController addChildViewController:vc1];
 	
 	ViewController *vc2 = [[ViewController alloc] init];
 	vc2.title = @"vc2";
-	[underLineController addChildViewController:vc2];
+
+	underLineController.controllerArray = @[vc1, vc2];
 	
 	[self.navigationController pushViewController:underLineController animated:YES];
 

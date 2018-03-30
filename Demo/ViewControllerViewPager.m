@@ -32,11 +32,11 @@
 - (void)p_setupSubViews {
     ChildTableViewController *childController1  = [[ChildTableViewController alloc] init];
     childController1.title = @"Normal1";
-    [self addChildViewController:childController1];
     
     ChildTableViewController *childController2  = [[ChildTableViewController alloc] init];
     childController2.title = @"Normal2";
-    [self addChildViewController:childController2];
+    
+    self.controllerArray = @[childController1, childController2];
 }
 
 @end

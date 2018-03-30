@@ -30,6 +30,9 @@ static const CGFloat kAnimationDuration = 0.25;
 // Tilte Font, default is system font, font size is 15.0
 @property (nonatomic, strong) UIFont *titleFont;
 
+// Set tab controllers to this array
+@property (nonatomic, strong) NSArray *controllerArray;
+
 
 @property (nonatomic, weak) UILabel *selectedLabel;
 
