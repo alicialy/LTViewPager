@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LTViewPager"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Pager switch like Netease"
   s.homepage     = "https://github.com/alicialy/LTViewPager"
   s.license      = "MIT"
