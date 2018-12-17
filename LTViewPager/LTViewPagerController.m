@@ -212,7 +212,7 @@ static const NSInteger kTagBase = 100;
     
     _titleScrollView = [[UIScrollView alloc] init];
     _titleScrollView.scrollsToTop = NO;
-    _titleScrollView.frame = CGRectMake(0, STATUSBAR_HEIGHT + NAVBAR_HEIGHT, SCREEN_WIDTH, self.titleHeight);
+    _titleScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.titleHeight);
     [self.view addSubview:_titleScrollView];
     return _titleScrollView;
 }

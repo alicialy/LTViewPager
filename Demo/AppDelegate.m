@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     DemoTableViewController *tableController = [[DemoTableViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableController];
+    navController.navigationBar.translucent = NO;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = navController;
