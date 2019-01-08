@@ -41,6 +41,11 @@ static const NSInteger kTagBase = 100;
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -136,17 +141,17 @@ static const NSInteger kTagBase = 100;
         }
     }
 
-    self.contentView.contentSize = CGSizeMake(count * SCREEN_WIDTH, self.contentView.jk_height);
+    self.contentView.contentSize = CGSizeMake(count * self.view.jk_width, self.contentView.jk_height);
     self.titleScrollView.contentSize = CGSizeMake(totalWidth, self.titleScrollView.jk_height);
 }
 
 - (void)p_setSeletedLabelTitleCenter {
-    CGFloat offsetX = self.selectedLabel.center.x - SCREEN_WIDTH / 2;
+    CGFloat offsetX = self.selectedLabel.center.x - self.view.jk_width / 2;
     if (offsetX < 0) {
         offsetX = 0;
     }
     
-    CGFloat maxOffsetX = self.titleScrollView.contentSize.width - SCREEN_WIDTH;
+    CGFloat maxOffsetX = self.titleScrollView.contentSize.width - self.view.jk_width;
     if (maxOffsetX >= 0 && offsetX > maxOffsetX) {
         offsetX = maxOffsetX;
     }
@@ -156,6 +161,7 @@ static const NSInteger kTagBase = 100;
 
 
 #pragma mark - ScrollView Delegate
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     self.isScrolling = NO;
      self.lastOffsetX = scrollView.contentOffset.x;
@@ -183,6 +189,7 @@ static const NSInteger kTagBase = 100;
             self.isTapTitle = NO;
         }
     }
+    
 }
 
 
@@ -197,6 +204,8 @@ static const NSInteger kTagBase = 100;
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     UIViewController *controller = self.controllerArray[indexPath.row];
+    [self addChildViewController:controller];
+    
     UIView *subView = (UIView *)controller.view;
     subView.frame = CGRectMake(0, 0, self.contentView.jk_width, self.contentView.jk_height);
 
@@ -212,7 +221,7 @@ static const NSInteger kTagBase = 100;
     
     _titleScrollView = [[UIScrollView alloc] init];
     _titleScrollView.scrollsToTop = NO;
-    _titleScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.titleHeight);
+    _titleScrollView.frame = CGRectMake(0, 0, self.view.jk_width, self.titleHeight);
     [self.view addSubview:_titleScrollView];
     return _titleScrollView;
 }
@@ -229,9 +238,10 @@ static const NSInteger kTagBase = 100;
     _contentView.pagingEnabled = YES;
     _contentView.showsHorizontalScrollIndicator = NO;
     CGFloat offsetY = CGRectGetMaxY(self.titleScrollView.frame);
-    CGRect frame = CGRectMake(0, offsetY, SCREEN_WIDTH, SCREEN_HEIGHT - offsetY);
+    CGRect frame = CGRectMake(0, offsetY, self.view.jk_width, self.view.jk_height - offsetY);
     _contentView.frame = frame;
     flowLayout.itemSize = frame.size;
+    flowLayout.minimumLineSpacing = 0.1;
     _contentView.backgroundColor = self.view.backgroundColor;
     [_contentView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kViewPagerReuseId];
     [self.view addSubview:_contentView];

@@ -8,6 +8,7 @@
 
 #import "ViewControllerViewPager.h"
 #import "ChildTableViewController.h"
+#import "NoneViewController.h"
 
 @interface ViewControllerViewPager ()
 
@@ -30,7 +31,7 @@
 }
 
 - (void)p_setupSubViews {
-    ChildTableViewController *childController1  = [[ChildTableViewController alloc] init];
+    NoneViewController *childController1  = [[NoneViewController alloc] init];
     childController1.title = @"Normal1";
     
     ChildTableViewController *childController2  = [[ChildTableViewController alloc] init];
