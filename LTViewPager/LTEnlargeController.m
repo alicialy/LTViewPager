@@ -27,10 +27,10 @@ static const CGFloat kEnlargeScale = 0.2;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)selectedLabel:(UILabel *)label {
+- (void)selectedLabel:(UILabel *)label animated:(BOOL)animated {
     self.selectedLabel.transform = CGAffineTransformIdentity;
     
-    [super selectedLabel:label];
+    [super selectedLabel:label animated:animated];
     
     CGFloat scale = 1.0 + self.enlargeScale;
     [UIView animateWithDuration:kAnimationDuration animations:^{

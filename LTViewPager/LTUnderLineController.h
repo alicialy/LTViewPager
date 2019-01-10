@@ -12,5 +12,6 @@
 
 // UnderLine color, default is red
 @property (nonatomic, strong) UIColor *underLineColor;
+//@property (nonatomic, assign) CGFloat underLineWidth;   // Default is Label Text Width
 
 @end

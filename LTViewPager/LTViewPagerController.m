@@ -20,11 +20,10 @@ static const NSInteger kTagBase = 100;
 @interface LTViewPagerController () <UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, assign) BOOL isInitial;
-@property (nonatomic, assign) BOOL isTapTitle;
-@property (nonatomic, assign) BOOL isScrolling;
+@property (nonatomic, assign) BOOL isEndDecelerating;
+@property (nonatomic, assign) BOOL isDragging;
 @property (nonatomic, assign) CGFloat lastOffsetX;
 @property (nonatomic, strong) UICollectionView *contentView;
-
 
 @end
 
@@ -63,7 +62,7 @@ static const NSInteger kTagBase = 100;
 
 #pragma mark - Public Method
 
-- (void)selectedLabel:(UILabel *)label {
+- (void)selectedLabel:(UILabel *)label animated:(BOOL)animated {
     self.selectedLabel.textColor = self.titleColor;
     label.textColor = self.titleTintColor;
     _selectedLabel = label;
@@ -71,12 +70,25 @@ static const NSInteger kTagBase = 100;
     [self p_setSeletedLabelTitleCenter];
 }
 
+- (void)didEndScrollingAnimation:(UIScrollView *)scrollView {
+    // Impeletement in Child Controller
+}
+
+- (void)didEndDecelerating:(UIScrollView *)scrollView {
+    // Impeletement in Child Controller
+}
+- (void)didScroll:(UIScrollView *)scrollView {
+    // Impeletement in Child Controller
+}
+
+- (void)willBeginDragging:(UIScrollView *)scrollView {
+    // Impeletement in Child Controller
+}
 
 #pragma mark - Gestures
 - (void)tapTitle:(UITapGestureRecognizer *)tap {
-    self.isTapTitle = YES;
     UILabel *label = (UILabel *)tap.view;
-    [self selectedLabel:label];
+    [self selectedLabel:label animated:YES];
     
     NSInteger index = label.tag;
     index -= kTagBase;
@@ -98,7 +110,6 @@ static const NSInteger kTagBase = 100;
         CGFloat width = titleBounds.size.width;
         [titleWidthArray addObject:@(width)];
     }
-
     return titleWidthArray;
 }
 
@@ -137,7 +148,7 @@ static const NSInteger kTagBase = 100;
         [self.titleScrollView addSubview:titleLabel];
         
         if (i == 0) {
-            [self selectedLabel:titleLabel];
+            [self selectedLabel:titleLabel animated:NO];
         }
     }
 
@@ -159,39 +170,45 @@ static const NSInteger kTagBase = 100;
     [self.titleScrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
 
+- (void)p_selectLabelWithIndex:(NSUInteger)index {
+    NSInteger selectedIndex = index + kTagBase;
+    UILabel *label = [self.titleScrollView viewWithTag:selectedIndex];
+    [self selectedLabel:label animated:NO];
+    
+    _isDragging = NO;
+}
 
 #pragma mark - ScrollView Delegate
-
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    self.isScrolling = NO;
-     self.lastOffsetX = scrollView.contentOffset.x;
+    if (_isEndDecelerating) {
+        _lastOffsetX = scrollView.contentOffset.x;
+    }
+    _isDragging = YES;
+    _isEndDecelerating = NO;
+    
+    [self willBeginDragging:scrollView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.isScrolling) {
-        return;
-    }
-    self.isScrolling = YES;
-    
-    NSInteger selectedIndex = self.selectedLabel.tag;
-    
-    if (scrollView.contentOffset.x > self.lastOffsetX) {
-        selectedIndex++;
-    } else {
-        selectedIndex--;
-    }
-    NSInteger index = selectedIndex - kTagBase;
-    if (index >= 0 && index < self.controllerArray.count) {
-        if (!self.isTapTitle) {
-            // Tap Tile has setted selected label
-            UILabel *label = [self.titleScrollView viewWithTag:selectedIndex];
-            [self selectedLabel:label];
-            self.isTapTitle = NO;
-        }
-    }
-    
+    [self didScroll:scrollView];
 }
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    _isDragging = YES;
+    _isEndDecelerating = YES;
+    
+    [self didEndDecelerating:scrollView];
+    
+    NSInteger index = scrollView.contentOffset.x / self.view.bounds.size.width;
+    [self p_selectLabelWithIndex:index];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    [self didEndScrollingAnimation:scrollView];
+    
+    NSInteger index = scrollView.contentOffset.x / self.view.bounds.size.width;
+    [self p_selectLabelWithIndex:index];
+}
 
 #pragma mark - Collection Delegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

@@ -38,6 +38,17 @@ static const CGFloat kAnimationDuration = 0.25;
 
 @property (nonatomic, strong) UIScrollView *titleScrollView;
 
-- (void)selectedLabel:(UILabel *)label;
+
+@property (nonatomic, assign, readonly) BOOL isDragging;
+
+@property (nonatomic, assign, readonly) CGFloat lastOffsetX;
+
+- (void)selectedLabel:(UILabel *)label animated:(BOOL)animated;
+
+
+- (void)didEndDecelerating:(UIScrollView *)scrollView;
+- (void)didEndScrollingAnimation:(UIScrollView *)scrollView;
+- (void)didScroll:(UIScrollView *)scrollView;
+- (void)willBeginDragging:(UIScrollView *)scrollView;
 
 @end
